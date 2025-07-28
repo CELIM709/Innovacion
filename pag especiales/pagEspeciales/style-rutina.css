@@ -1,0 +1,103 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fce8d5; /* Fondo durazno claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.contenedor-rutina {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Un poco más ancho para el texto de la rutina */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.seccion-rutina {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos de la rutina */
+}
+
+.item-rutina {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+/* NUEVA CLASE para los íconos de Font Awesome */
+.icono-rutina-fa {
+    font-size: 2.2em; /* Tamaño del ícono */
+    width: 50px; /* Asegura un tamaño fijo para el círculo */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 50%; /* Para hacer los íconos circulares */
+    background-color: rgba(255, 255, 255, 0.25); /* Fondo semitransparente para los íconos */
+    /* No necesita padding si el font-size y el width/height son adecuados */
+}
+
+.texto-rutina {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.hora {
+    font-size: 1.1em; /* Un poco más grande para la hora */
+    font-weight: 800; /* Más negrita para la hora */
+    margin-bottom: 3px;
+}
+
+.actividad {
+    font-size: 0.9em; /* Más pequeño para la descripción de la actividad */
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Colores específicos para cada elemento de la rutina */
+.azul-claro {
+    background-color: #79c8f0; /* Azul claro */
+}
+
+.azul-oscuro {
+    background-color: #4a90e2; /* Azul más oscuro */
+}
+
+.amarillo {
+    background-color: #f7d14d; /* Amarillo */
+    color: #6d4d00; /* Texto más oscuro para mejor contraste en amarillo */
+}
+
+.naranja {
+    background-color: #fa9b50; /* Naranja */
+}
+
+.nota {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 30px;
+}

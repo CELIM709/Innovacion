@@ -1,0 +1,201 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fce8d5; /* Fondo durazno claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.contenedor-logros {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Ancho similar al menú principal */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.seccion-logros {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos de logro */
+    margin-bottom: 30px;
+}
+
+.logro-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff; /* Color de texto por defecto para la mayoría de los logros */
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Añadido para un efecto al pasar el ratón */
+}
+
+.logro-item:hover {
+    transform: translateY(-3px); /* Pequeño levantamiento al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.icono-logro {
+    font-size: 2.2em;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ancho fijo para los íconos */
+    height: 50px; /* Alto fijo para los íconos */
+    border-radius: 50%; /* Hacer los íconos circulares */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente para los íconos */
+    color: inherit; /* Hereda el color del padre para el icono */
+}
+
+.texto-logro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    flex-grow: 1;
+}
+
+.titulo-logro {
+    font-size: 1.1em;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.progreso-logro {
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.8); /* Color un poco más claro para el texto de progreso */
+}
+
+/* Colores de los logros existentes */
+.azul-claro {
+    background-color: #79c8f0; /* Azul cielo */
+}
+
+.amarillo {
+    background-color: #f7d14d; /* Amarillo vibrante */
+    color: #6d4d00; /* Texto oscuro para contraste */
+}
+.amarillo .icono-logro {
+    color: #6d4d00; /* Icono oscuro para contraste */
+}
+.amarillo .progreso-logro {
+    color: rgba(109, 77, 0, 0.7); /* Progreso oscuro y semitransparente */
+}
+
+.naranja {
+    background-color: #fa9b50; /* Naranja melocotón */
+}
+
+.azul-oscuro {
+    background-color: #4a90e2; /* Azul medio */
+}
+
+/* --- NUEVOS COLORES PARA LOS LOGROS --- */
+
+.verde {
+    background-color: #2ecc71; /* Un verde vibrante (similar al de Font Awesome) */
+}
+
+.rojo {
+    background-color: #e74c3c; /* Un rojo clásico */
+}
+
+.morado {
+    background-color: #9b59b6; /* Un morado amigable */
+}
+
+.turquesa {
+    background-color: #1abc9c; /* Un turquesa refrescante */
+}
+
+/* --- Fin Nuevos Colores --- */
+
+.boton-reset {
+    background-color: #ccc;
+    color: #555;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.boton-reset:hover {
+    background-color: #bbb;
+    transform: translateY(-2px);
+}
+
+.nota {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Media Queries para responsividad (si ya los tienes, revísalos y ajusta si es necesario) */
+@media (max-width: 600px) {
+    .contenedor-logros {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitulo {
+        font-size: 1em;
+    }
+
+    .logro-item {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+
+    .icono-logro {
+        font-size: 2em;
+        width: 45px;
+        height: 45px;
+    }
+
+    .titulo-logro {
+        font-size: 1em;
+    }
+
+    .progreso-logro {
+        font-size: 0.85em;
+    }
+
+    .boton-reset {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+}

@@ -1,0 +1,146 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fce8d5; /* Fondo durazno claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.contenedor-emociones {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 480px; /* Un poco más ancho para el contenido interactivo */
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.lista-emociones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+    justify-content: center; /* Centra los botones de emoción */
+    gap: 15px; /* Espacio entre los botones */
+    margin-bottom: 30px;
+}
+
+.emocion-item {
+    display: flex;
+    flex-direction: column; /* Icono y texto apilados */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 15px; /* Más redondeado para parecer una "cajita" */
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none; /* Quita el borde predeterminado del botón */
+    cursor: pointer; /* Indica que es clickeable */
+    width: 120px; /* Ancho fijo para los botones */
+    height: 100px; /* Alto fijo */
+}
+
+.emocion-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icono-emocion {
+    font-size: 2.5em; /* Tamaño grande para el ícono */
+    margin-bottom: 8px; /* Espacio entre el ícono y el texto */
+    color: rgba(255, 255, 255, 0.9); /* Color del ícono casi blanco */
+}
+
+/* Colores de las emociones (iguales a los del formato original) */
+.amarillo {
+    background-color: #f7d14d; /* Amarillo */
+    color: #6d4d00; /* Texto más oscuro para contraste */
+}
+.amarillo .icono-emocion {
+    color: #6d4d00; /* Ícono también oscuro para contraste */
+}
+
+
+.azul-oscuro {
+    background-color: #4a90e2; /* Azul oscuro */
+}
+
+.naranja {
+    background-color: #fa9b50; /* Naranja */
+}
+
+.azul-claro {
+    background-color: #79c8f0; /* Azul claro */
+}
+
+.verde {
+    background-color: #6cb65d; /* Un nuevo color verde para la calma */
+}
+
+/* Estilos para el panel de información de la emoción */
+.info-emocion {
+    background-color: #e0f2f7; /* Fondo azul claro para el panel de info */
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left; /* Alinea el texto de la info a la izquierda */
+    display: flex;
+    align-items: flex-start; /* Alinea la imagen y el texto arriba */
+    gap: 20px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.avatar-info {
+    width: 80px; /* Tamaño del avatar */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #79c8f0; /* Borde alrededor del avatar */
+    flex-shrink: 0; /* Evita que el avatar se encoja */
+}
+
+.texto-info {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.texto-info h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.texto-info p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.ejemplo-consejo span {
+    display: block;
+    font-size: 0.95em;
+    color: #007bff; /* Color para los ejemplos/consejos */
+    font-style: italic;
+    margin-bottom: 5px;
+}

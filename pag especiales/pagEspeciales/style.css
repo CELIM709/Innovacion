@@ -1,0 +1,101 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fce8d5; /* Fondo durazno claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.contenedor {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 0.6em; /* Más pequeño para el subtítulo */
+    display: block;
+    color: #666;
+    margin-top: 5px;
+}
+
+.tarjeta-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del menú */
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+.item-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icono {
+    font-size: 1.8em;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Ancho fijo para los íconos */
+    height: 40px; /* Alto fijo para los íconos */
+    border-radius: 50%; /* Hacer los íconos circulares */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente para los íconos */
+}
+
+/* Colores específicos para cada elemento del menú */
+.azul-claro {
+    background-color: #79c8f0; /* Azul claro */
+}
+
+.azul-oscuro {
+    background-color: #4a90e2; /* Azul más oscuro */
+}
+
+.amarillo {
+    background-color: #f7d14d; /* Amarillo */
+    color: #6d4d00; /* Texto más oscuro para mejor contraste en amarillo */
+}
+
+.naranja {
+    background-color: #fa9b50; /* Naranja */
+}
+
+.azul-pie {
+    background-color: #4a90e2; /* Igual que el azul oscuro para "Mi Profe" */
+}
+
+.icono-perfil {
+    width: 40px; /* Ajustar el tamaño para la imagen de perfil */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    background-color: transparent; /* Eliminar el fondo para el ícono de imagen */
+}

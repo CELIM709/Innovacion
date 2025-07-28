@@ -1,0 +1,268 @@
+        /* --- Estilos Generales para el Contenedor de Actividades --- */
+/* Asegúrate de que tu main-content tenga un max-width y esté centrado */
+.main-content {
+    max-width: 900px; /* Un ancho razonable para la tarjeta principal */
+    margin: 30px auto; /* Centrar la tarjeta en la página */
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    text-align: center; /* Centrar texto dentro del main-content */
+}
+
+/* Títulos y Descripciones */
+#tituloContenido {
+    font-size: 2.5em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+#descripcionContenido {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.instruccion-actividad {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los elementos de aprendizaje (elementosAprendizaje) */
+#elementosAprendizaje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px 0;
+    min-height: 200px; /* Asegura un área mínima para los elementos */
+}
+
+/* --- Estilos para Colores, Formas, Números, Letras (para que se vean como tus imágenes) --- */
+.learning-item {
+    display: flex;
+    flex-direction: column; /* Apila el contenido si hay texto e icono */
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Tamaño de los cuadrados */
+    height: 100px;
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #f0f4f8; /* Un fondo gris claro para los elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.6em; /* Tamaño de fuente para números/letras */
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none; /* Si se usan como enlaces */
+}
+
+.learning-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores Específicos para .color-item si tuvieran texto */
+.color-item {
+    color: white; /* Por defecto para el texto sobre colores oscuros */
+    border: 2px solid transparent; /* Para evitar que el color del borde se superponga */
+    /* El background-color se define directamente en el JS */
+}
+
+/* Ajuste para el texto en el círculo blanco */
+.color-item[style*="background-color: rgb(236, 240, 241)"] { /* blanco */
+    color: #333; /* Texto oscuro para el fondo claro */
+}
+
+/* Estilo para las formas SVG o iconos de FontAwesome */
+.forma-item i {
+    font-size: 3em; /* Iconos más grandes */
+    color: #555; /* Color oscuro para las formas */
+}
+
+/* Estilo para el Rectángulo en Formas (asegúrate de que este también esté en tu CSS) */
+.rectangulo-css {
+    width: 4em;
+    height: 2em;
+    border: 3px solid currentColor; /* Usa el color actual del texto del padre */
+    margin: 0.5em; /* Ajusta si es necesario */
+    display: inline-block;
+    border-radius: 5px;
+    color: #555; /* Color del borde del rectángulo */
+}
+
+
+/* --- Estilos para Identificar y Matemáticas --- */
+.identification-question, .math-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Más espacio */
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.identification-image {
+    width: 200px; /* Más grande */
+    height: 200px;
+    object-fit: contain; /* Para que la imagen se vea completa */
+    border-radius: 15px;
+    border: 3px solid #eee;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.math-problem {
+    font-size: 3.5em; /* Más grande */
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.identification-options, .math-options, .counting-options { /* Las opciones de conteo también usan este estilo */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+}
+
+.option-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Más padding */
+    border-radius: 10px; /* Más redondeado */
+    font-size: 1.4em; /* Texto más grande */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-button:active {
+    transform: translateY(0);
+    background-color: #004085;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Estilos para Memoria --- */
+.memory-game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px; /* Ancho consistente */
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f0f8ff;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.word-to-memorize {
+    font-size: 4.5em; /* Más grande aún */
+    font-weight: bold;
+    color: #34495e;
+    min-height: 120px; /* Altura para evitar saltos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.word-to-memorize.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.memory-options-hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.memory-options-visible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    opacity: 1;
+}
+
+.memory-option-button {
+    /* Utiliza los estilos base de .option-button para consistencia */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.5em; /* Un poco más grandes para las palabras */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 180px; /* Un poco más ancho para palabras */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.memory-option-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.memory-option-button:active {
+    transform: translateY(0);
+    background-color: #004085;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Estilos para Contar --- */
+.counting-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio generoso */
+    padding: 30px;
+    background-color: #e6f7ff; /* Un azul muy suave */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.objects-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre los objetos individuales */
+    min-height: 120px; /* Altura mínima para contener objetos */
+    padding: 10px;
+    border: 2px dashed #a0d8f0; /* Borde punteado para el área de objetos */
+    border-radius: 10px;
+    background-color: #ffffff; /* Fondo blanco para el área de objetos */
+}
+
+.objects-display i { /* Estilo para los iconos de FontAwesome usados como objetos */
+    font-size: 4em; /* Iconos de objeto grandes */
+    margin: 0 5px; /* Pequeño margen para separación visual */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra ligera para los objetos */
+}
